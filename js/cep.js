@@ -1,4 +1,4 @@
-const cep = document.querySelector("#cep")
+const cep = document.querySelector("#cep");
 
 const showData = (result)=>{
     for(const campo in result){

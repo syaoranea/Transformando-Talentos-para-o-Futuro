@@ -1,60 +1,116 @@
 <!DOCTYPE html>
-<html lang="pt">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gama Academy - Transformando Talentos para o Futuro
-    </title>
-    <link rel="stylesheet" href="estilo.css" />
-</head>
-<body>
-    <header>
-        
-        <nav>
-          <a class="logo" href="/">Itautech</a>
-          <div class="mobile-menu">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-          </div>
-          <ul class="nav-list">
-            <li><a href="index.html">Início</a></li>
-            <li><a href="sobre.html">Sobre</a></li>
-            <li><a href="#">Projeto</a></li>
-            <li><a href="#">Login</a></li>
-          </ul>
-        </nav>
-      </header>
-      <main>
+    <html lang="pt">
+      <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gama Academy - Transformando Talentos para o Futuro
+        </title>
+        <link rel="stylesheet" href="estilo.css" />
+      </head>
+      <body>
+        <header>
+          
+          <nav>
+              <img src="img/logo-itau-varejo-desktop.webp" height="50" width="50">
+              <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+              </div>
+            <ul class="nav-list">
+              <li><a href="index.html">Início</a></li>
+              <li><a href="sobre.html">Sobre</a></li>
+              <li><a href="#">Projeto</a></li>
+              <li><a href="#">Login</a></li>
+            </ul>
+          </nav>
+        </header>
         <div class="login">
-            <img src="img/logo.png" alt="logo Itau">
+          <a class="logo" href="index.html">Itautech<span style="font-size: 12px;"> Programa de Formação Tech </span></a>
             <ul class="login-list">
-                <li><span>Ainda não é usuário? Cadastre Aqui:</span><a href="cadastro.php" class="botao" target="_blank">Cadastrar</a></li>
+                <li style="display: none;"><span>Inscreva-se Aqui:</span><a href="cadastro.php" class="botao" target="_blank">Inscrição</a></li>
             </ul>
         </div>
-
-        </div> 
-        <div class="container_1">
-            <div class="con_col2 card">
-              <span class="et_pb_image_wrap "><img src="img/home-1.png" alt="Duas mulher sorrindo e olhando para celular" title="home-1" ></span>
-            </div> 
-            <div class="con_col1 card">
-              <div class="patext">
-                <h1>O produto mais pedido da semana para <span style="color: #7932be;">voce.</span></h1>
+        <main>
+           
+            <form method="POST" action="redirecionar.html">
+                <div id="hidden"><p class="erro" id="error">CPF inválido</p></div>
+              <div class="input-field">
+                  <input id="name" type="text"  placeholder="Nome Completo (obrigatório)" required>
+                  <label for="name"><img src="img/avatar.png" height="33" width="33"></label>
               </div>
-                <p class="homep">O parceiro ideal para sua operação de e-commerce, integrando marketplaces e todas as soluções que você precisa em um só lugar. Venda nos principais canais de venda e otimize seus resultados.</p>
-                <a class="et_pb_button et_pb_button_2 et_pb_bg_layout_light" href="https://www.ideris.com.br/onboarding/" target="_blank">Teste 7 dias grátis!</a>
-            </div> 
-            
-          </div>
-        
-          
-        
-      </main>
+              <div class="input-field">
+                 
+                  <input id="cpf" type="text" autocomplete="off" maxlength="14" onkeyup="mascara_cpf()" onblur="valida_cpf()" placeholder="CPF (obrigatório)">
+                  <label for="cpf"><img src="img/avatar.png" height="33" width="33"></label>
+                  
+              </div>
+              <div class="input-field">
+                  <input type="text" placeholder="RG" pattern="[0-9]{2}.[0-9]{3}.[0-9]{3}-[0-9]{2}" title="Digite o numero no formato XX.XXX.XXX-XX"  maxlength="13" onkeyup="mascara_rg()"  id="rg">
+                  <label for="rg"><img src="img/avatar.png" height="33" width="33"></label>
+              </div>
+              <div class="input-field">
+                  <input type="text" placeholder="Endereço (obrigatório)" id="logradouro" required>
+                  <label for="endereco"><img src="img/avatar.png" height="33" width="33"></label>
+              </div>
+              <div class="imputmenor">
+                  <div class="input-field imputmenor2">
+                      <input type="text" placeholder="Numero (obrigatório)" id="Numero" required>
+                      <label for="Numero"><img src="img/avatar.png" height="33" width="33"></label>
+                  </div>
+                  
+                  <div class="input-field imputmenor2">
+                      <input type="text" placeholder="Bairro" id="bairro">
+                      <label for="bairro"><img src="img/avatar.png" height="33" width="33"></label>
+                  </div>
+              </div>
+              <div class="input-field">
+                  <input type="text" placeholder="Cidade" id="localidade">
+                  <label for="cidade"><img src="img/avatar.png" height="33" width="33"></label>
+              </div>
+              <div class="imputmenor">
+                  <div class="input-field imputmenor2">
+                      <input type="text" placeholder="Estado" id="uf">
+                      <label for="estado"><img src="img/avatar.png" height="33" width="33"></label>
+                  </div>
+                  <div class="input-field imputmenor2">
+                      <input type="text" placeholder="Cep" id="cep">
+                      <label for="cep"><img src="img/avatar.png" height="33" width="33"></label>
+                  </div>
+              </div>
+              <div class="input-field">
+                  <input type="text" placeholder="Telefone Fixo" pattern="[0-9]{2}-[0-9]{4}-[0-9]{4}" title="Digite o numero no formato XX-XXXX-XXXX" onkeyup="mascara_fixo()" maxlength="12" id="telefone">
+                  <label for="telefone"><img src="img/avatar.png" height="33" width="33"></label>
+              </div>
+              <div class="input-field">
+                  <input type="text" pattern="[0-9]{2}-[0-9]{5}-[0-9]{4}" title="Digite o numero no formato XX-XXXXX-XXXX" placeholder="Telefone Celular (obrigatório)" onkeyup="mascara_celular()" maxlength="13" id="celular" required>
+                  <label for="celular"><img src="img/avatar.png" height="33" width="33"></label>
+              </div>
+              <div class="checkbox">
+                <fieldset>
+                    <legend>Marque seu Sexo</legend>
+                  <input type="checkbox" id="feminino" name="sexo" value="F">
+                  <label for="feminino">F = Feminino</label>
+                  <input type="checkbox" id="masculino" name="sexo" value="M">
+                  <label for="masculino">M = Masculino</label>
+                  <input type="checkbox" id="x" name="sexo" value="X">
+                  <label for="x">X = Prefiro não responder</label>
+                </fieldset>
+            </div>
+              <button class="botao">
+                  Cadastrar
+              </button>
+          </form>
+        </main>
+        <div class="rodape">
+            <p>Itaú | Diversidade & Inclusão - A melhor versão de cada um de nós.</p>
+        </div>
+       
+        <script src="js/cep.js"></script>
+        <script src="js/mascaras.js"></script>
+        <script src="js/validacao_cpf.js"></script>
+        <script src="js/mobile-navbar.js"></script>
       
-
-      <script src="mobile-navbar.js"></script>
-    
-</body>
-</html>
+  </body>
+  </html>

@@ -18,8 +18,10 @@ function valida_cpf(cpf = 0){
 
     if(soma != cpf[9]){
         console.log("erro 1");
+        var container = document.getElementById("cpf");
+        container.style.border = "1px solid #f20909";
         var container = document.getElementById("hidden");
-        container.ad
+        container.style.display ="block";
         console.log("erro 1");
         return false
     }
@@ -37,11 +39,16 @@ function valida_cpf(cpf = 0){
 
     if(soma != cpf[10]){
         console.log("erro 2");
-        var container = document.getElementById("#error");
-        container.style.display = "block";
+        var container = document.getElementById("cpf");
+        container.style.border = "1px solid #f20909";
+        var container = document.getElementById("hidden");
+        container.style.display ="block";
         return false
     }
-    
+    var container = document.getElementById("cpf");
+        container.style.border = "1px solid #89837F";
+    var container = document.getElementById("hidden");
+        container.style.display ="none";
     console.log("validado");
     console.log(soma);
     return true;
