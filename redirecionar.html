@@ -9,8 +9,20 @@
 <body>
     
     <script>
+
+const options = {
+        method: 'Get',
+        mode: 'cors',
+        cache: 'default'
+    }
+
+    fetch(`https://itauformulario.netlify.app/sucesso.html`, options)
+    .then(Response => location.href = "https://itauformulario.netlify.app/sucesso.html";
+})
+    .catch(e => console.log('Deu erro: '+ e,message))
+
         
-    location.href = "https://itauformulario.netlify.app/sucesso.html";
+    
 
     </script>
 </body>
